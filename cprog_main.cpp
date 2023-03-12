@@ -2,8 +2,8 @@
 #include <math.h>
 
 int main(){
-    int a, b;
-    std::cin >> a >> b;
-    std::cout << (a+b) << std::endl;
+    double cm;
+    std::cin >> cm;
+    std::cout << cm / 2.54 << std::endl;
     return 0;
 }
