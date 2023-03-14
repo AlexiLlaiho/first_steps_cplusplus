@@ -1,9 +1,9 @@
 #include <iostream>
 #include <math.h>
+#include <cstdint>
 
 int main(){
-    double cm;
-    std::cin >> cm;
-    std::cout << cm / 2.54 << std::endl;
-    return 0;
+uint64_t n;
+    std::cin >> n;
+    std::cout << n * (n + 1) / 2 << "\n";
 }
