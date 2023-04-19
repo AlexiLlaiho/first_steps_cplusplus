@@ -4,26 +4,32 @@
 
 int main()
 {
-    unsigned int index;
-    unsigned int month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    unsigned int year;    
-    while(std::cin >> index >> year){    
-        if(year % 400 == 0){
-            if(index == 2)            
-                std::cout << month[index]+1 << std::endl; //yes
-            else
-                std::cout << month[index] << std::endl; //yes
+    unsigned int num_day;    
+    unsigned int days_quantity;
+    unsigned int space = 0; 
+
+    while(std::cin >> num_day >> days_quantity){
+        if(num_day != 7)
+        {
+            space = num_day - 1;
+            for(int i = 0; i < space; i++)
+            {
+                std::cout << " ";
+            }
+            for(int i:days_quantity)
+            {
+                std::cout << " " << i;
+            }
+            std::cout << std::endl;
         }
-        else if(year % 100 == 0){
-            std::cout << month[index] << std::endl; //no
-        }
-        else if(year % 4 == 0)
-            if(index == 2)            
-                std::cout << month[index]+1 << std::endl; //yes
-            else
-                std::cout << month[index] << std::endl; //yes
-        else
-             std::cout << month[index] << std::endl; //no
+        else{
+            space = 6;
+            for(int i = 0; i < space; i++)
+            {
+                std::cout << "  ";
+            }    
+            std::cout << "1";
+        }        
     }
     return 0;    
 }
